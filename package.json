@@ -1,0 +1,17 @@
+{
+  "name": "transferbitcoins",
+  "version": "1.0.0",
+  "description": "tranfer bitcoins in live and testnet",
+  "main": "send-bitcoins.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sujit kumar singh, sujit141994@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bitcore-lib": "0.15.0",
+    "bluebird": "3.5.1",
+    "request": "2.85.0",
+    "request-promise": "4.2.2"
+  }
+}
