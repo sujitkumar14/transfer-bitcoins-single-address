@@ -194,7 +194,7 @@ module.exports = function(privateKey, to, amount,network){
 
 	var publicKey = bitcore.HDPublicKey(privateKey);
 	var address = new bitcore.Address(publicKey.publicKey).toString();
-	
+	amount = safeMaths(amount,'*','100000000');
 
 	var data = {};
 
