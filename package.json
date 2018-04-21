@@ -9,6 +9,7 @@
   "author": "sujit kumar singh, sujit141994@gmail.com",
   "license": "ISC",
   "dependencies": {
+    "bignumber.js": "6.0.0",
     "bitcore-lib": "0.15.0",
     "bluebird": "3.5.1",
     "request": "2.85.0",

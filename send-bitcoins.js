@@ -140,6 +140,8 @@ var sendRawTx = function (rawTx) {
 
 var safeMaths = function(first, operation, sec) {
 
+    first = first.toString();
+    sec = sec.toString();
     var a = new BigNumber(first);
     var b = new BigNumber(sec);
 
@@ -200,7 +202,7 @@ module.exports = function(privateKey, to, amount,network){
 
 	
 
-	utxosForAmount(address,Number(totalAmount))
+	utxosForAmount(address,Number(amount))
 	.then(function(utxos){
 		data.utxos = utxos;
 
@@ -211,13 +213,13 @@ module.exports = function(privateKey, to, amount,network){
 		data.fee = fee;
 
 		
-		
+		  console.log(amount);
 
 		var transaction = new bitcore.Transaction()
 		.from(data.utxos)
 		.change(address)
-		.fee(data.fee);
-        .to(address,amount)
+		.fee(data.fee)
+        .to(address,Number(amount))
         .sign(private);
 		
 
